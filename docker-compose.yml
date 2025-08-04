@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  bolt-app:
+    build: .
+    ports:
+      - "8080:80"  # host:container
+    container_name: ai-tag
+    restart: unless-stopped
