@@ -55,7 +55,7 @@ async function getTemplateData(templateId) {
   const { data, error } = await supabase.from("document_templates").select(`
       *,
       tags:template_tags(*)
-    `);
+    `).eq("id", templateId).single();
   if (error) {
     throw new Error(`Failed to fetch template: ${error.message}`);
   }
