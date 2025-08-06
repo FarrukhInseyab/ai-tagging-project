@@ -226,7 +226,7 @@ const retryLoadWithBackoff = () => {
         width: '100%',
         height: '600px',
         documentType: 'word',
-        documentServerUrl: 'http://172.22.25.154:8082',
+        documentServerUrl: 'https://dmseditor-dev.gomoney.com.sa',
         document: {
           fileType: 'docx',
           key: key,
@@ -294,7 +294,7 @@ const retryLoadWithBackoff = () => {
       width: '100%',
       height: '600px',
       documentType: 'word',
-      documentServerUrl: 'http://172.22.25.154:8082',
+      documentServerUrl: 'https://dmseditor-dev.gomoney.com.sa',
       document: {
         fileType: 'docx',
         key: documentKey,
@@ -342,7 +342,7 @@ const retryLoadWithBackoff = () => {
 };
 
   const createBlankDocument = async (): Promise<string> => {
-    const blankDocxContent = `UEsDBBQAAAAIAOuAOVcAAAAAAAAAAAAAAAALAAAAX3JlbHMvLnJlbHOtksFqwzAMhu+DvYPRfXGSdqNMXUuHYYOxXgfbO1jOJBH5I2Nt9/YzHQwGG2Mc9P/f9+8VmPUcdjJgeAMODK7RdVG26EjCj2+NXvgBJawS6T16Ug+3nUQf1gMuEoo/jILfrAEaw2Bl6JBOZMLvz4tJwT1ahdxWSNDfgjyjlSIWnP2isCCRfQGd6eTt28UrAjNVkArABTpOPnICvQBfQP+gHqOCrk9MS9WkMSdgV4+9X2b1Ub7jR0IZmBt+kYqXJ0/jGkn7bPHnzBXW8BXd4Rqapz7Dws2zfYu+lMdMRtu2tpJEtlYZ3eOOSBLFwkdB2/s3yElLsT/PK/BfAAD//wMAUEsDBBQAAAAIAOuAOVcAAAAAAAAAAAAAAAAPAAAAZG9jUHJvcS9h proposéLnhtbJPBSgMxEIafBd9hyL1Jd1sQabZFELyIFLyGZCZtMJkJyWxr396sWi8qPc5l/v9/5vtIrOs2OQdQjbU8Y2nGmANZWCt5nbGXl/v0jjlnhLRCWYcZO4Jh6/z6CtNSl1pJeHIOlHMZq4xpY9IkEUJDI5S1HXjwpjVaJOCtrhMhbQsJY1nGhkkS1YJWQjXQCaE7+A8BaQz/B4Dv7Wq1+gNAz/sPgIhSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSS`;
+    const blankDocxContent = `UEsDBBQAAAAIAOuAOVcAAAAAAAAAAAAAAAALAAAAX3JlbHMvLnJlbHOtksFqwzAMhu+DvYPRfXGSdqNMXUuHYYOxXgfbO1jOJBH5I2Nt9/YzHQwGG2Mc9P/f9+8VmPUcdjJgeAMODK7RdVG26EjCj2+NXvgBJawS6T16Ug+3nUQf1gMuEoo/jILfrAEaw2Bl6JBOZMLvz4tJwT1ahdxWSNDfgjyjlSIWnP2isCCRfQGd6eTt28UrAjNVkArABTpOPnICvQBfQP+gHqOCrk9MS9WkMSdgV4+9X2b1Ub7jR0IZmBt+kYqXJ0/jGkn7bPHnzBXW8BXd4Rqapz7Dws2zfYu+lMdMRtu2tpJEtlYZ3eOOSBLFwkdB2/s3yElLsT/PK/BfAAD//wMAUEsDBBQAAAAIAOuAOVcAAAAAAAAAAAAAAAAPAAAAZG9jUHJvcS9h proposï¿½LnhtbJPBSgMxEIafBd9hyL1Jd1sQabZFELyIFLyGZCZtMJkJyWxr396sWi8qPc5l/v9/5vtIrOs2OQdQjbU8Y2nGmANZWCt5nbGXl/v0jjlnhLRCWYcZO4Jh6/z6CtNSl1pJeHIOlHMZq4xpY9IkEUJDI5S1HXjwpjVaJOCtrhMhbQsJY1nGhkkS1YJWQjXQCaE7+A8BaQz/B4Dv7Wq1+gNAz/sPgIhSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSSimllFJKKaWUUkoppZRSS`;
     const blob = new Blob([blankDocxContent], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
     return URL.createObjectURL(blob);
   };
