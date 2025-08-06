@@ -87,7 +87,7 @@ export class TemplateService {
           category:template_categories(*),
           tags:template_tags(*)
         `)
-        .eq('user_id', user.id)
+       // .eq('user_id', user.id)
         .eq('is_archived', false)
         .order('updated_at', { ascending: false });
 
@@ -257,7 +257,7 @@ export class TemplateService {
       const { data, error } = await supabase
         .from('template_categories')
         .select('*')
-        .eq('user_id', user.id)
+      //  .eq('user_id', user.id)
         .order('sort_order', { ascending: true });
 
       if (error) this.handleDatabaseError(error, 'getCategories');
@@ -301,7 +301,7 @@ export class TemplateService {
       const { data: templates, error: templatesError } = await supabase
         .from('document_templates')
         .select('id, usage_count, created_at, category_id')
-        .eq('user_id', user.id)
+        // .eq('user_id', user.id)
         .eq('is_archived', false);
 
       if (templatesError) this.handleDatabaseError(templatesError, 'getTemplateStats - templates');
@@ -316,7 +316,7 @@ export class TemplateService {
       const { data: generations, error: generationsError } = await supabase
         .from('document_generations')
         .select('id, created_at, documents_count')
-        .eq('user_id', user.id)
+        // .eq('user_id', user.id)
         .gte('created_at', new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString());
 
       if (generationsError) this.handleDatabaseError(generationsError, 'getTemplateStats - generations');
@@ -355,7 +355,7 @@ export class TemplateService {
           category:template_categories(*),
           tags:template_tags(*)
         `)
-        .eq('user_id', user.id)
+       // .eq('user_id', user.id)
         .eq('is_archived', false)
         .textSearch('search_vector', query)
         .order('usage_count', { ascending: false });
