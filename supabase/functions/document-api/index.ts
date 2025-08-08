@@ -164,7 +164,7 @@ async function generateDocument(templateBuffer, data, tags, mappings = []) {
           mappingsObj[tagName] = String(data[dataKey]);
         } else {
           // If data key not found, use placeholder
-          mappingsObj[tagName] = `[No data for ${tagName}]`;
+          mappingsObj[tagName] = "" ;//`[No data for ${tagName}]`;
         }
       });
     } else {
@@ -189,7 +189,7 @@ async function generateDocument(templateBuffer, data, tags, mappings = []) {
             mappingsObj[tagName] = String(data[matchingKey]);
           } else {
             // If no match found, use a placeholder
-            mappingsObj[tagName] = `[No data for ${tagName}]`;
+            mappingsObj[tagName] = "";//`[No data for ${tagName}]`;
           }
         }
       });
@@ -696,7 +696,7 @@ serve(async (req)=>{
             if (data[dataKey] !== undefined) {
               mappingsObj[tagName] = String(data[dataKey]);
             } else {
-              mappingsObj[tagName] = `[No data for ${tagName}]`;
+              mappingsObj[tagName] = "";//`[No data for ${tagName}]`;
             }
           });
         } else {
@@ -705,7 +705,7 @@ serve(async (req)=>{
             if (data[tagName] !== undefined) {
               mappingsObj[tagName] = String(data[tagName]);
             } else {
-              mappingsObj[tagName] = `[No data for ${tagName}]`;
+              mappingsObj[tagName] = "";//`[No data for ${tagName}]`;
             }
           });
         }
@@ -898,7 +898,7 @@ serve(async (req)=>{
             if (data[dataKey] !== undefined) {
               mappingsObj[tagName] = String(data[dataKey]);
             } else {
-              mappingsObj[tagName] = `[No data for ${tagName}]`;
+              mappingsObj[tagName] = "";//`[No data for ${tagName}]`;
             }
           });
         } else {
@@ -907,7 +907,7 @@ serve(async (req)=>{
             if (data[tagName] !== undefined) {
               mappingsObj[tagName] = String(data[tagName]);
             } else {
-              mappingsObj[tagName] = `[No data for ${tagName}]`;
+              mappingsObj[tagName] = "";//`[No data for ${tagName}]`;
             }
           });
         }
